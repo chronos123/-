@@ -2,7 +2,6 @@
 
 运算符有 <br>
 BETWEEN 
-
 LIKE pattern（表示） 
 ```sql
 SELECT FROM 
