@@ -53,7 +53,7 @@ GO
 ALTER TABLE
  ADD
  
-ALERT TABLE 
+ALTER TABLE 
  DROP COLUMN
 
 添加
@@ -70,10 +70,26 @@ DROP COLUMN column_name
 
 运算符有 <br>
 BETWEEN <br>
-LIKE pattern（%表示缺少的字符，类似正则表达式） 
+AND <br>
+OR <br>
+LIKE <br>
+```sql
+LIKE pattern
+（%表示缺少的字符，类似正则表达式；'___'表示三个字数） 
+```
 ```sql
 SELECT FROM 
  WHERE (运算符)
+```
+排序
+```sql
+SELECT Company, OrderNumber FROM Orders ORDER BY Company
+
+SELECT Company, OrderNumber FROM Orders ORDER BY Company, OrderNumber
+(字母相同使用数字)
+
+SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC
+(DESC 降序，ASC 升序)
 ```
 
 ### 插入
@@ -83,6 +99,31 @@ INSERT INTO (表明)(列) VALUES(值)
 ```
 
 ### 多表查询
+利用不同表中相同的列
 ```sql
-
+SELECT STUDENT.SNO,SNAME,CLASS,平均分=AVG(DEGREE)
+	FROM STUDENT,SCORE
+	WHERE STUDENT.SNO=SCORE.SNO
 ```
+利用JOIN
+```sql
+SELECT STUDENT.SNO,SNAME,CLASS,平均分=AVG(DEGREE)
+	FROM STUDENT
+	JOIN SCORE ON STUDENT.SNO=SCORE.SNO
+```
+
+### 分组
+GROUP BY进行分项组合
+```sql
+SELECT Customer,SUM(OrderPrice) FROM Orders
+GROUP BY Customer
+（按GROUP BY分项求和，合并）
+
+SELECT COURSE.CNO,CNAME,AVG(DEGREE)
+	FROM COURSE
+	JOIN SCORE ON SCORE.CNO=COURSE.CNO
+	GROUP BY COURSE.CNO,COURSE.CNAME
+	ORDER BY AVG(DEGREE) DESC
+（按GROUP BY分项求平均，合并）
+```
+
