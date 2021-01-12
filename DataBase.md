@@ -26,11 +26,11 @@ FileGrowth=2MB
 
 ### 创建表
 
-<ul>数据类型
- <ul>VARCHAR(7)  
- <ul>DATATIME  YYYY-MM-DD HH:MM:SS
- <ul>NUMERIC(a,b) a:总位数 b：小数位数
- <ul>PRIMARY KEY 主键（表的标识）
+<or>数据类型
+ <ol> VARCHAR(7)  
+ <ol> DATATIME  YYYY-MM-DD HH:MM:SS
+ <ol> NUMERIC(a,b) a:总位数 b：小数位数
+ <ol> PRIMARY KEY 主键（表的标识）
 ```sql
 use DataBaseEG_18231008
 
