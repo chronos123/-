@@ -48,7 +48,7 @@ CREATE TABLE STUDENT
 GO
 ```
 
-### 添加和删除列
+### 添加和删除列（修改表的结构）
 ```sql
 ALTER TABLE
  ADD
@@ -65,6 +65,17 @@ ALTER TABLE table_name
 DROP COLUMN column_name
 ```
 
+### 添加和删除，更新列（修改表内数据）
+```sql
+UPDATE   卷面  SET  总评 = 总评 +5   WHERE  班号="300211"
+UPDATE  表名   SET  列名 ＝ 表达式
+
+DELETE  FROM  表名  [WHERE  条件]
+若WHERE子句缺省，则是无条件删除表中的全部数据，但表仍然存在。
+
+INSERT  INTO  表名[（列名[，列名]…）]  VALUES  （常量[，常量]…）
+主键不能为空
+```
 
 ### 选择
 
@@ -95,10 +106,10 @@ SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC
 ### 插入
 
 ```sql
-INSERT INTO (表明)(列) VALUES(值)
+INSERT INTO (表名)(列) VALUES(值)
 ```
 
-### 多表查询
+### 多表查询(标明列的表来源)
 利用不同表中相同的列
 ```sql
 SELECT STUDENT.SNO,SNAME,CLASS,AVG(DEGREE)
@@ -134,6 +145,13 @@ SELECT STUDENT.SNO,SNAME,CLASS,AVG(DEGREE)
 	FROM STUDENT,SCORE
 	WHERE STUDENT.SNO=SCORE.SNO
 	GROUP BY STUDENT.SNO,STUDENT.SNAME,STUDENT.CLASS
-	HAVING AVG(DEGREE)>=80 and AVG(DEGREE)<=100
+	HAVING AVG(DEGREE) BETWEEN 80 AND 00
 	ORDER BY AVG(DEGREE) DESC
+```
+
+### 添加索引
+```sql
+CREATE  [UNIQUE]  INDEX 索引名 ON  表名（列名[次序][，列名[次序]]…）
+CREATE INDEX t ON test (ID)
+UNIQUE表示每一索引值只对应唯一的数据记录，一般在主键上建立这样的索引
 ```
