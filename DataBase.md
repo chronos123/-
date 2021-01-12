@@ -155,3 +155,14 @@ CREATE  [UNIQUE]  INDEX 索引名 ON  表名（列名[次序][，列名[次序]]
 CREATE INDEX t ON test (ID)
 UNIQUE表示每一索引值只对应唯一的数据记录，一般在主键上建立这样的索引
 ```
+
+### 复合语句
+```sql
+DELETE  FROM  FAIL  WHERE SNO =
+		(SELECT  SNO  FROM S
+			WHERE SN =‘刘萍’)；
+删除之中带有选择
+```
+
+
+
