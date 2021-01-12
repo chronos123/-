@@ -49,12 +49,13 @@ GO
 ```
 
 ### 添加和删除列
+```sql
 ALTER TABLE
  ADD
  
 ALERT TABLE 
  DROP COLUMN
-```sql
+
 添加
 ALTER TABLE table_name
 ADD column_name datatype
