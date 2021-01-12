@@ -32,6 +32,7 @@ FileGrowth=2MB
  <li> NUMERIC(a,b) a:总位数 b：小数位数</li>
  <li> PRIMARY KEY 主键（表的标识）</li>
 </ul>
+
 ```sql
 use DataBaseEG_18231008
 
@@ -72,7 +73,7 @@ LIKE pattern（%表示缺少的字符，类似正则表达式）
 ```sql
 SELECT FROM 
  WHERE (运算符)
-···
+```
 
 ### 插入
 
