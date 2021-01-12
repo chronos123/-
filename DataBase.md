@@ -112,7 +112,7 @@ SELECT STUDENT.SNO,SNAME,CLASS,AVG(DEGREE)
 	JOIN SCORE ON STUDENT.SNO=SCORE.SNO
 ```
 
-### 分组
+### 分组(针对合计函数)
 GROUP BY进行分项组合
 ```sql
 SELECT Customer,SUM(OrderPrice) FROM Orders
