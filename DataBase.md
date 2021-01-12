@@ -27,10 +27,10 @@ FileGrowth=2MB
 ### 创建表
 
 <ul>数据类型
- <li> VARCHAR(7)  </li>
- <li> DATATIME  YYYY-MM-DD HH:MM:SS</li>
- <li> NUMERIC(a,b) a:总位数 b：小数位数</li>
- <li> PRIMARY KEY 主键（表的标识）</li>
+ <li> <b>VARCHAR(7)</b>  </li>
+ <li> <b>DATATIME</b>  YYYY-MM-DD HH:MM:SS</li>
+ <li> <b>NUMERIC(a,b)</b> a:总位数 b：小数位数</li>
+ <li> <b>PRIMARY KEY</b> 主键（表的标识）</li>
 </ul>
 
 ```sql
