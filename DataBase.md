@@ -92,6 +92,8 @@ WHERE 列 LIKE pattern
 ```sql
 SELECT FROM 
  WHERE (运算符)
+
+NAME = '王%'，%表示任意字母
 ```
 排序
 ```sql
