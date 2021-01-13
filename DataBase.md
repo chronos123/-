@@ -84,6 +84,7 @@ BETWEEN <br>
 AND <br>
 OR <br>
 LIKE <br>
+LEN 对字符串求长<br>
 ```sql
 SELECT 列 FROM 表
 WHERE 列 LIKE pattern
