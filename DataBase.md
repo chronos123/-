@@ -70,8 +70,9 @@ DROP COLUMN column_name
 UPDATE   卷面  SET  总评 = 总评 +5   WHERE  班号="300211"
 UPDATE  表名   SET  列名 ＝ 表达式
 
-DELETE  FROM  表名  [WHERE  条件]
+DELETE  FROM  表名  [WHERE  列名]
 若WHERE子句缺省，则是无条件删除表中的全部数据，但表仍然存在。
+删除符合列名的一行
 
 INSERT  INTO  表名[（列名[，列名]…）]  VALUES  （常量[，常量]…）
 主键不能为空
