@@ -85,7 +85,8 @@ AND <br>
 OR <br>
 LIKE <br>
 ```sql
-LIKE pattern
+SELECT 列 FROM 表
+WHERE 列 LIKE pattern
 （%表示缺少的字符，类似正则表达式；'___'表示三个字数） 
 ```
 ```sql
