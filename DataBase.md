@@ -110,6 +110,17 @@ SELECT Company, OrderNumber FROM Orders ORDER BY Company DESC
 (DESC 降序，ASC 升序)
 ```
 
+### 带功能的选择
+
+LEFT(, n) 取出前n个字母<br>
+```sql
+SELECT name, capital
+FROM world
+WHERE name <> capital AND LEFT(name,1) = LEFT(capital, 1)
+
+% <>表示不等号
+```
+
 ### 插入
 
 ```sql
