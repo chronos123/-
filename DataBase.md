@@ -87,7 +87,7 @@ OR <br>
 XOR 不取同时成立<br>
 LIKE <br>
 LEN 对字符串求长<br>
-ROUND(, n) 保留n位小数<br>
+ROUND(, n) 保留n位小数,负数表示向前取整<br>
 ```sql
 SELECT 列 FROM 表
 WHERE 列 LIKE pattern
